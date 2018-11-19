@@ -108,7 +108,7 @@ static NSArray *ASCollectUIAccessibilityElementsForNode(ASDisplayNode *viewNode,
 - (id)accessibilityElementAtIndex:(NSInteger)index
 {
   ASDisplayNodeAssertNotNil(_accessibleElements, @"At this point _accessibleElements should be created.");
-  if (_accessibleElements == nil) {
+  if (_accessibleElements == nil || index >= _accessibleElements.count) {
     return nil;
   }
   
